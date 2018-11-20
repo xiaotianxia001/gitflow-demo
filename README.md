@@ -76,7 +76,15 @@ git merge --no-ff hotfix-v1
 git push
 git branch -d hotfix-v1
 git tag -a tag-v1 master
-git push --tags
+git push --tags（把本地所有的tag版本号发送到远程）
+git push origin tag-v2.0.1(把此版本号的tag发送到远程)
+
+查看当前分支： git tag 
+添加本地标签：git tag -a 版本号 
+删除本地标签: git tag -d 版本号 
+推送某标签至远程：git push origin 版本号 
+推送全部标签至远程：git push origin –tags 提交所有tag至远程，使用git push origin 不会提交本地标签 
+删除远程标签： git push origin :refs/tags/版本号
 
 在sourcetree中使用git flow
 
